@@ -34,7 +34,12 @@ off_time = total_time - duty_cycle = (255-OCR0x) / 255
 //so
 //duty_cycle = 1 - ((255 - OCR0x) / 255)
 
+//for example
 
+//at OCR0A = 192, duty cycle = 25% (non-inverted) and 75% (inverted)
+//at OCR0A = 128, duty cyle = 50% (non-inverted) and 50% (inverted)
+//at OCR0A = 1, duty cycle = 100% (non-inverted) and 0% (inverted)
+//at OCR0A = 0, duty cycle = 0% (non-inverted) and 100% (inverted)
 
 
 
