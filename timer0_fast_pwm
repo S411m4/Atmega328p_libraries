@@ -26,9 +26,13 @@ f_OCOApwm = f_clck / (N*256)
 //duty cycle = (time_on) / (time_on + time_off)
 
 //non-inverted pwm: time_on = time when TCNT0 = 0 
+duty_cycle (time_on) = (255 - OCR0x) / 255
+
 //inverted pwm: time_off = time when TCNT0 = OCR0x
-
-
+off_time = total_time - duty_cycle = (255-OCR0x) / 255
+(do 100% - duty cycle to calculate the required duty cycle)
+//so
+//duty_cycle = 1 - ((255 - OCR0x) / 255)
 
 
 
